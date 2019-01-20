@@ -124,6 +124,7 @@ def main():
             except:
                 utils.print_message(traceback.format_exc())
                 pass
+        db_utils.commit()
         utils.print_message("Total new photos posted: {} {}".format(successfuly_posted, " " * 25))
     elif PARAMS['command'].lower() == "username2id":
         utils.print_message("Processing...")
